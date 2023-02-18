@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/aa1b1f1bdf.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/logo.jpg" alt="Image" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#"><i class="fa-solid fa-tablet-button"></i></a></li>
+                    <i class="fas fa-times" onclick="closemenu()"></i>
+                </ul>
+                <i class="fas fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <h2>Hi! I am <br><span> JaxTheCodex</span></h2>
+                &nbsp;<p>Web Developer/UI-UX Designer/App D eveloper</p>
+            </div>
+        </div>
+    </div>
+    <!---About section-->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/about.jpg">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="subtitle">About me</h1>
+                    <p>Hello My name is Jagarnath Patro.I am a BCA(Bachelor in computer application) 2nd year
+                        student in LIT(Lakshya Institute of technology)in Bhubaneshwar.I want to built career in
+                        web development ,graphics desining and android development.
+                        <br>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto magnam neque possimus, ad
+                        praesentium molestias iusto eligendi pariatur dicta, consectetur ducimus obcaecati culpa
+                        recusandae quibusdam eius quia nulla perferendis. Quas perferendis explicabo minima temporibus,
+                        rem quo, reprehenderit voluptatem harum quidem commodi consequuntur? Ipsum, eum numquam.
+                    </p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Web-Development</span><br>Designing web interfaces/front-end and backend
+                                development </li>
+                            <li><span>Graphics Designing</span><br>Banner designing /logo designing </li>
+                            <li><span>Android-Development</span><br>App development /App bug fixing </li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>Portfolio-website</span><br>I have made a fully responsive portfolio website on my
+                                career </li>
+                            <li><span>Banner-designing</span><br>Banner designing is demander by most of the big
+                                companies for advertisement of their products so banners are hugely made and i am one of
+                                those banner designer</li>
+                            <li><span>Android-development</span><br>Android app development is very common thing now a
+                                days so i have gained 2 years of experience in android app development.</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>Matriculation/10th Board</span><br>Sree Ayyappa Public School/CBSE Board</li>
+                            <li><span>+2 Board</span><br>Sree Ayyappa Public School/Science(PCM-IT)</li>
+                            <li><span>Under-Graduation</span><br>Lakshya Institute Of Technology/BCA 2nd year</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!----Services---------->
+    <div id="services">
+        <div class="container">
+            <h1 class="subtitle">My services</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Web development</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius velit, natus aperiam soluta,
+                        consequuntur alias facilis perferendis officiis iusto hic neque molestiae quia dignissimos est
+                        commodi totam cum saepe porro adipisci! Quisquam beatae magnam debitis voluptatibus natus
+                        dignissimos eligendi officiis, odio sint illum consectetur impedit.
+                    </p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-pen"></i>
+                    <h2>Graphics designing</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius velit, natus aperiam soluta,
+                        consequuntur alias facilis perferendis officiis iusto hic neque molestiae quia dignissimos est
+                        commodi totam cum saepe porro adipisci! Quisquam beatae magnam debitis voluptatibus natus
+                        dignissimos eligendi officiis, odio sint illum consectetur impedit.
+                    </p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-brands fa-android"></i>
+                    <h2>Android development</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius velit, natus aperiam soluta,
+                        consequuntur alias facilis perferendis officiis iusto hic neque molestiae quia dignissimos est
+                        commodi totam cum saepe porro adipisci! Quisquam beatae magnam debitis voluptatibus natus
+                        dignissimos eligendi officiis, odio sint illum consectetur impedit.
+                    </p>
+                    <a href="#">Learn more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--------portfolio--->
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Work</h1>
+                <div class="work-list">
+                    <div class="work">
+                        <img src="images/work1.jpg">
+                        <div class="layer">
+                            <h3>Social media app</h3>
+                            <p>The app connects you to the talented people around the world.
+                                <br>
+                                Download it form the play-store.
+                            </p>
+                            <a href="#">Get</a>
+                        </div>
+                    </div>
+                    <div class="work">
+                        <img src="images/work2.jpg">
+                        <div class="layer">
+                            <h3>Music Player App</h3>
+                            <p>The app provides you your favourite songs.
+                                <br>
+                                Download it form the play-store.
+                            </p>
+                            <a href="#">Get</a>
+                        </div>
+                    </div>
+                    <div class="work"> 
+                        <img src="images/work3.jpg">
+                        <div class="layer">
+                            <h3>Workout  App</h3>
+                            <p>This app provides you all necessary workout.
+                                <br>
+                                Download it form the play-store.
+                            </p>
+                            <a href="#">Get</a>
+                        </div>
+                    </div>
+                </div>
+                <a href="" class="btn">See More</a>
+        </div>
+    </div>
+<!---Contact page-->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fas fa-paper-plane"></i>Jagarnathpatro836@gmail.com</p>
+                <p><i class="fas fa-phone-square-alt"></i>6200505664</p>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/jagarnath.patro.9?mibextid=ZbWKwL"><i class="fab fa-facebook"></i></a>
+                    <a href=""><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/jagarnath-patro-0a4413244/"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/JaxTheCodex"><i class="fab fa-github"></i></a>
+                </div>
+                <a href="CV.pdf" download class="btn btn2">Download CV</a>
+            </div>
+            <div class="contact-right">
+                <form>
+                    <input type="text" name="name" placeholder="Your name" required>
+                    <input type="email" name="email" placeholder="Your email" required>
+                    <textarea name="message" rows="6" placeholder="Your message"></textarea> 
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="copyright">
+    <p>Copyright &#169; Made by JaxTheCodex</p>
+</div>
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName('tab-contents');
+        function opentab(tabname) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+    <script>
+        var sidemenu=document.getElementById('sidemenu');
+        function openmenu(){
+            sidemenu.style.right="0";
+        }
+        function closemenu(){
+            sidemenu.style.right="-200px";
+        }
+    </script>
+</body>
+
+</html>
