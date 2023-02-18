@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<!--<link rel="stylesheet" href="style.css">--> 
+<style>
+    *{
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins',sans-serif;
+    box-sizing: border-box ;
+}
+body{
+    background: #080808;
+    color:#fff;
+}
+#header{
+    width:100%;
+    height:100vh;
+    background-image: url('images/back.jpg');
+    background-size: cover;
+    background-position: center;
+    
+}
+nav{
+    padding: 10px 10%;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background-color: #080808;
+}
+.logo{
+    height:60px;
+    width:400px;
+}
+nav ul li{
+    list-style:none;
+    display:inline-block;
+    margin: 10px;
+}
+nav ul li a{
+    color:#fff;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+}
+nav ul li a::after{
+    content:'';
+    width:0;
+    height:3px;
+    background: #ff004f;
+    position: absolute;
+    left:0;
+    bottom:-6px;
+    transition: 0.5s;
+}
+nav ul li a:hover{
+    text-shadow:
+    0 0 7px rgb(244, 156, 156),
+    0 0 10px rgb(244, 156, 156),
+    0 0 21px rgb(244, 156, 156),
+    0 0 42px rgb(255, 0, 0),
+    0 0 82px rgb(255, 0, 0),
+    0 0 92px rgb(255, 0, 0),
+    0 0 102px rgb(255, 0, 0),
+    0 0 151px rgb(255, 0, 0);
+}
+nav ul li a:hover::after{
+    width:100%;
+    color: #ff004f;
+}
+.header-text{
+    padding: 10px 10%;
+    margin-top: 20%;
+    font-size: 35px;
+    color: white;
+    text-shadow: 0 0 10px #15ff00,
+    0 0 20px #22ff00,
+    0 0 40px #15ff00,
+    0 0 80px #15ff00,
+    0 0 120px #15ff00; 
+}
+.header-text span{
+    font-size: 60px;
+    margin-top: 20px;
+    animation: ani 5s linear infinite;
+    color: white;
+}
+@keyframes ani{
+    10%{
+        text-shadow: 0 0 10px #ff0000,
+    0 0 20px #ff0000,
+    0 0 40px #ff0000,
+    0 0 80px #ff0000,
+    0 0 120px #ff0000; 
+    }
+    20%{
+        text-shadow: 0 0 10px #00aeff,
+    0 0 20px #00aeff,
+    0 0 40px #00aeff,
+    0 0 80px #00aeff,
+    0 0 120px #00aeff;  
+    }
+    40%{
+        text-shadow: 0 0 10px #1e00ff,
+        0 0 20px #1e00ff,
+        0 0 40px #1e00ff,
+        0 0 80px #1e00ff,
+        0 0 120px #1e00ff;   
+    }
+    95%{
+        text-shadow: 0 0 10px #ffff00,
+    0 0 20px #ffff00,
+    0 0 40px #ffff00,
+    0 0 80px #ffff00,
+    0 0 120px #ffff00; 
+    }
+}
+/*About style*/
+#about{
+    padding: 0px;
+    color:#ababab;
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.about-col-1{
+    flex-basis: 35%;
+}
+.about-col-1 img{
+    width:100%;
+    height: 700px;
+    border-radius:15px;
+    margin: 30px 30px;
+}
+.about-col-2{
+    flex-basis: 60%;
+    padding-top: 30px;
+}
+.subtitle{
+    font-size: 60px;
+    font-weight: 600;
+    color: #fff; 
+}
+.tab-titles{
+    display:flex;
+    margin: 20px 0 40px;
+}
+.tab-links{
+    margin-right:50px;
+    font-size: 22px;
+    font-weight:500;
+    cursor:pointer;
+    position:relative;
+}
+.tab-links::after{
+    content:'';
+    width:0;
+    height:3px;
+    background:#ff004f;
+    position: absolute;
+    left:0;
+    bottom: -8px;
+    transition:0.5s;
+}
+.tab-links.active-link::after{
+    width:50%;
+}
+.tab-contents ul li{
+    list-style:none;
+    margin:10px 0;
+}
+.tab-contents ul li span{
+    color:#b54769;
+    font-size:14px;
+}
+.tab-contents{
+    display:none;
+}
+.tab-contents.active-tab{
+    display:block;
+}
+/*services*/
+#services{
+    padding-left: 30px;
+    padding-right: 30px;
+}
+.services-list{
+    display:grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    grid-gap:40px;
+    margin-top: 50px;
+}
+.services-list a{
+    text-decoration: none;
+    font-size:medium;
+    font-family: sans-serif;
+    font-weight: 100;
+    color:red;
+}
+.services-list div{
+    background: #262626;
+    padding:40px;
+    font-size:13px;
+    font-weight: 300;
+    border-radius: 10px;
+    transition: background 0.5s,transform 0.5s;
+}
+.services-list div i{
+    font-size:50px;
+    margin-bottom: 30px;
+}
+.services-list div h2{
+    font-size:30px;
+    font-weight:500;
+    margin-bottom:15px;
+}
+.services-list div a{
+    text-decoration:none;
+    color:#fff;
+    font-size:20px;
+    margin-top:20px;
+    display:inline-block;
+}
+.services-list div:hover{
+    background: #ff004f;
+    transform: translateY(-10px);
+}
+/* portfolio*/
+#portfolio{
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 30px;
+}
+.work-list{
+    display:grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    grid-gap:40px;
+    margin-top:50px;
+}
+.work{
+    border-radius: 10px;
+    position:relative;
+    overflow:hidden;
+}
+.work img{
+    width:100%;
+    border-radius:10px;
+    display:block;
+    transition: transform 0.5s;
+}
+.layer{
+    width:100%;
+    height:0;
+    background:linear-gradient(rgba(0, 0, 0, 0.739),#ff004f);
+    border-radius: 10px;
+    position:absolute;
+    left:0;
+    bottom:0;
+    overflow:hidden;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-direction:column;
+    padding:0 40px;
+    text-align:center;
+    font-size: 14px;
+    transition: height 0.5s;
+}
+.layer h3{
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+.layer a{
+    margin-top: 20px;
+    color:#ff004f;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 60px;
+    background: #fff;
+    width:60px;
+    height:60px;
+    border-radius:50%;
+    text-align:center;
+}
+.work:hover img{
+    transform: scale(1.1);
+}
+.work:hover .layer{
+    height:100%;
+}
+.btn{
+    display:block;
+    margin:50px auto;
+    width:fit-content;
+    border:1px solid #ff004f;
+    padding: 14px 50px;
+    border-radius: 6px;
+    text-decoration: none;
+    color:#fff;
+    transition: background 0.5s;
+}
+.btn:hover{
+    background: #ff004f;
+
+}
+/* -----------contact -------------*/
+#contact{
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 30px;
+}
+.contact-left{
+    flex-basis: 35%;
+}
+.contact-right{
+    flex-basis: 60%;
+}
+.contact-left p{
+    margin-top: 30px;
+}
+.contact-left p i{
+    color: #ff004f;
+    margin-right: 15px;
+    font-size: 25px;
+}
+.social-icons{
+    margin-top: 30px;
+}
+.social-icons a{
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    color:#ababab;
+    display:inline-block;
+    transition: transform 0.5s;
+}
+.social-icons a:hover{
+    color:#ff004f;
+    transform: translateY(-5px);
+}
+.btn.btn2{
+    display:inline-block;
+    background:#ff004f;
+}
+.contact-right form{
+    width:100%;
+}
+form input,form textarea{
+    width:100%;
+    border:0;
+    outline:none;
+    background: #262626;
+    padding: 15px;
+    margin:15px 0;
+    color:#fff;
+    font-size: 18px;
+    border-radius: 6px;
+}
+form .btn2{
+    padding: 14px 60px;
+    font-size:18px;
+    margin-top: 20px;
+    cursor:pointer;
+}
+.copyright{
+    width:100%;
+    text-align:center;
+    padding: 25px 0;
+    background:#262626;
+    font-weight:300;
+    margin-top: 20px;
+}
+/*-----css for small devices-------*/
+nav .fas{
+    display: none;
+    cursor: pointer;
+}
+@media only screen and (max-width:600px){
+    #header{
+        background-image: url('images/back2.jpg');
+    }
+    .header-text{
+        margin-top: 100%;
+        font-size:16px;
+    }
+    .header-text h1{
+        font-size: 30px;
+    }
+    .header-text span{
+        font-size: 40px;
+    }
+    .logo{
+        display: inline-block;
+        height:50px;
+        width: 300px;
+    }
+    nav .fas{
+        display:block;
+        font-size: 25px;
+    }
+    nav ul{
+        background: #ff004f;
+        position: fixed;
+        top:0;
+        right:-200px;
+        width:200px;
+        height:100vh;
+        padding-top:50px;
+        z-index: 2;
+        transition: right 0.5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 25px;
+    }
+    nav ul .fas{
+        position: absolute;
+        top:25px;
+        left:25px;
+        cursor: pointer;
+    }
+    .about-col-1 img{
+        flex-basis: 100%;
+        width: 350px;
+        height: 500px
+    }
+    #about{
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .subtitle{
+        font-size: 30px;
+    }
+    .contact-left,.contact-right{
+        flex-basis: 100%;
+    }
+}
+
+</style>
+    <script src="https://kit.fontawesome.com/aa1b1f1bdf.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/logo.jpg" alt="Image" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#"><i class="fa-solid fa-tablet-button"></i></a></li>
+                    <i class="fas fa-times" onclick="closemenu()"></i>
+                </ul>
+                <i class="fas fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <h2>Hi! I am <br><span> JaxTheCodex</span></h2>
+                &nbsp;<p>Web Developer/UI-UX Designer/App D eveloper</p>
+            </div>
+        </div>
+    </div>
+    <!---About section-->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/about.jpg">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="subtitle">About me</h1>
+                    <p>Hello My name is Jagarnath Patro.I am a BCA(Bachelor in computer application) 2nd year
+                        student in LIT(Lakshya Institute of technology)in Bhubaneshwar.I want to built career in
+                        web development ,graphics desining and android development.
+                        <br>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto magnam neque possimus, ad
+                        praesentium molestias iusto eligendi pariatur dicta, consectetur ducimus obcaecati culpa
+                        recusandae quibusdam eius quia nulla perferendis. Quas perferendis explicabo minima temporibus,
+                        rem quo, reprehenderit voluptatem harum quidem commodi consequuntur? Ipsum, eum numquam.
+                    </p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Web-Development</span><br>Designing web interfaces/front-end and backend
+                                development </li>
+                            <li><span>Graphics Designing</span><br>Banner designing /logo designing </li>
+                            <li><span>Android-Development</span><br>App development /App bug fixing </li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>Portfolio-website</span><br>I have made a fully responsive portfolio website on my
+                                career </li>
+                            <li><span>Banner-designing</span><br>Banner designing is demander by most of the big
+                                companies for advertisement of their products so banners are hugely made and i am one of
+                                those banner designer</li>
+                            <li><span>Android-development</span><br>Android app development is very common thing now a
+                                days so i have gained 2 years of experience in android app development.</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>Matriculation/10th Board</span><br>Sree Ayyappa Public School/CBSE Board</li>
+                            <li><span>+2 Board</span><br>Sree Ayyappa Public School/Science(PCM-IT)</li>
+                            <li><span>Under-Graduation</span><br>Lakshya Institute Of Technology/BCA 2nd year</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!----Services---------->
+    <div id="services">
+        <div class="container">
+            <h1 class="subtitle">My services</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Web development</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius velit, natus aperiam soluta,
+                        consequuntur alias facilis perferendis officiis iusto hic neque molestiae quia dignissimos est
+                        commodi totam cum saepe porro adipisci! Quisquam beatae magnam debitis voluptatibus natus
+                        dignissimos eligendi officiis, odio sint illum consectetur impedit.
+                    </p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-pen"></i>
+                    <h2>Graphics designing</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius velit, natus aperiam soluta,
+                        consequuntur alias facilis perferendis officiis iusto hic neque molestiae quia dignissimos est
+                        commodi totam cum saepe porro adipisci! Quisquam beatae magnam debitis voluptatibus natus
+                        dignissimos eligendi officiis, odio sint illum consectetur impedit.
+                    </p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-brands fa-android"></i>
+                    <h2>Android development</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius velit, natus aperiam soluta,
+                        consequuntur alias facilis perferendis officiis iusto hic neque molestiae quia dignissimos est
+                        commodi totam cum saepe porro adipisci! Quisquam beatae magnam debitis voluptatibus natus
+                        dignissimos eligendi officiis, odio sint illum consectetur impedit.
+                    </p>
+                    <a href="#">Learn more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--------portfolio--->
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Work</h1>
+                <div class="work-list">
+                    <div class="work">
+                        <img src="images/work1.jpg">
+                        <div class="layer">
+                            <h3>Social media app</h3>
+                            <p>The app connects you to the talented people around the world.
+                                <br>
+                                Download it form the play-store.
+                            </p>
+                            <a href="#">Get</a>
+                        </div>
+                    </div>
+                    <div class="work">
+                        <img src="images/work2.jpg">
+                        <div class="layer">
+                            <h3>Music Player App</h3>
+                            <p>The app provides you your favourite songs.
+                                <br>
+                                Download it form the play-store.
+                            </p>
+                            <a href="#">Get</a>
+                        </div>
+                    </div>
+                    <div class="work"> 
+                        <img src="images/work3.jpg">
+                        <div class="layer">
+                            <h3>Workout  App</h3>
+                            <p>This app provides you all necessary workout.
+                                <br>
+                                Download it form the play-store.
+                            </p>
+                            <a href="#">Get</a>
+                        </div>
+                    </div>
+                </div>
+                <a href="" class="btn">See More</a>
+        </div>
+    </div>
+<!---Contact page-->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fas fa-paper-plane"></i>Jagarnathpatro836@gmail.com</p>
+                <p><i class="fas fa-phone-square-alt"></i>6200505664</p>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/jagarnath.patro.9?mibextid=ZbWKwL"><i class="fab fa-facebook"></i></a>
+                    <a href=""><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/jagarnath-patro-0a4413244/"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/JaxTheCodex"><i class="fab fa-github"></i></a>
+                </div>
+                <a href="CV.pdf" download class="btn btn2">Download CV</a>
+            </div>
+            <div class="contact-right">
+                <form>
+                    <input type="text" name="name" placeholder="Your name" required>
+                    <input type="email" name="email" placeholder="Your email" required>
+                    <textarea name="message" rows="6" placeholder="Your message"></textarea> 
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="copyright">
+    <p>Copyright &#169; Made by JaxTheCodex</p>
+</div>
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName('tab-contents');
+        function opentab(tabname) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+    <script>
+        var sidemenu=document.getElementById('sidemenu');
+        function openmenu(){
+            sidemenu.style.right="0";
+        }
+        function closemenu(){
+            sidemenu.style.right="-200px";
+        }
+    </script>
+</body>
+
+</html>
